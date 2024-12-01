@@ -5,6 +5,9 @@ import { authOptions } from "../../lib/auth";
 import prisma from "@repo/db/client";
 import P2pTransferCard from "../../../components/P2pTransferCard";
 async function getP2pTransactions(index: number) {
+
+
+    
   const session = await getServerSession(authOptions);
   const fromP2pTransactions = await prisma.p2pTransfer.findMany({
     take: 10,
